@@ -1,0 +1,16 @@
+{
+  "source": "./src",
+  "destination": "./docs",
+  "plugins": [
+    {"name": "esdoc-standard-plugin"},
+    {
+      "name": "esdoc-integrate-test-plugin",
+      "option": {
+        "source": "./src/",
+        "interfaces": ["describe", "it", "context", "suite", "test"],
+        "includes": ["(spec|Spec|test|Test)\\.js$"],
+        "excludes": ["\\.config\\.js$"]
+      }
+    }
+  ]
+}
